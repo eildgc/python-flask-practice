@@ -1,4 +1,5 @@
-# Byte-compiled / optimized / DLL files
+node_modules
+# Byte-compled / optimized / DLL files
 __pycache__/
 *.py[cod]
 *$py.class

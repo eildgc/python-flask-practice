@@ -8,9 +8,10 @@
       content="width=device-width, initial-scale=1.0"
     />
     <title>Flash bank</title>
+    <link href="{{ url_for('static', filename='css/output.css') }}" rel="stylesheet">
   </head>
   <body>
-    <h1>Menu banco</h1>
+    <h1 class="bg-slate-900 text-blue-400">Menu banco</h1>
     <ul>
       <li>
         <a href="{{url_for('create_account')}}">Crear cuenta</a>
