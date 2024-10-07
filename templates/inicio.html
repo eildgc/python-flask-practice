@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta
+      charset="UTF-8"
+      <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Flash bank</title>
+  </head>
+  <body>
+    <h1>Menu banco</h1>
+    <ul>
+      <li>
+        <a href="{{url_for('create_account')}}">Crear cuenta</a>
+      </li>
+      <li>
+        <a href="{{url_for('deposit')}}">Depositar dinero</a>
+      </li>
+      <li>
+        <a href="{{url_for('withdraw')}}">Retirar dinero</a>
+      </li>
+      <li>
+        <a href="{{url_for('check_balance')}}">Ver balance</a>
+      </li>
+      <li>
+        <a href="{{url_for('transfer')}}">Transferir dinero</a>
+      </li>
+      <li>
+        <a href="{{url_for('generate_statement')}}">Generar estado de cuenta</a>
+      </li>
+    </ul>
+    <p>{{get_flashed_messages()}}</p>
+  </body>
+</html>
