@@ -8,30 +8,75 @@
       content="width=device-width, initial-scale=1.0"
     />
     <title>Flash bank</title>
-    <link href="{{ url_for('static', filename='css/output.css') }}" rel="stylesheet">
+    <link
+      href="{{ url_for('static', filename='css/output.css') }}"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <h1 class="bg-slate-900 text-blue-400">Menu banco</h1>
-    <ul>
-      <li>
-        <a href="{{url_for('create_account')}}">Crear cuenta</a>
-      </li>
-      <li>
-        <a href="{{url_for('deposit')}}">Depositar dinero</a>
-      </li>
-      <li>
-        <a href="{{url_for('withdraw')}}">Retirar dinero</a>
-      </li>
-      <li>
-        <a href="{{url_for('check_balance')}}">Ver balance</a>
-      </li>
-      <li>
-        <a href="{{url_for('transfer')}}">Transferir dinero</a>
-      </li>
-      <li>
-        <a href="{{url_for('generate_statement')}}">Generar estado de cuenta</a>
-      </li>
-    </ul>
-    <p>{{get_flashed_messages()}}</p>
+    <div class="w-screen flex flex-col items-center pt-20 gap-4">
+      <div class="bg-slate-700 rounded-t-xl w-5/6 md:w-1/3 gap-2">
+        <h1
+          class="bg-slate-900 rounded-t-xl font-bold mx-auto text-center px-4 py-3"
+        >
+          🏦 Menu banco 💰💵
+        </h1>
+        <ul
+          class="px-4 py-5 w-full relative flex flex-col justify-between gap-2"
+        >
+          <li class="">
+            <a href="{{url_for('create_account')}}" class="group relative w-max"
+              ><span>💸 Crear cuenta</span>
+              <span
+                class="absolute -bottom-1 left-0 w-0 transition-all h-0.5 bg-white group-hover:w-full"
+              ></span>
+            </a>
+          </li>
+          <li>
+            <a class="group relative w-max" href="{{url_for('deposit')}}"
+              ><span>📥 Depositar dinero</span>
+              <span
+                class="absolute -bottom-1 left-0 w-0 transition-all h-0.5 bg-white group-hover:w-full"
+              ></span>
+            </a>
+          </li>
+          <li>
+            <a class="group relative w-max" href="{{url_for('withdraw')}}"
+              ><span>📤 Retirar dinero</span>
+              <span
+                class="absolute -bottom-1 left-0 w-0 transition-all h-0.5 bg-white group-hover:w-full"
+              ></span>
+            </a>
+          </li>
+          <li>
+            <a class="group relative w-max" href="{{url_for('check_balance')}}"
+              ><span>💳 Ver balance</span>
+              <span
+                class="absolute -bottom-1 left-0 w-0 transition-all h-0.5 bg-white group-hover:w-full"
+              ></span>
+            </a>
+          </li>
+          <li>
+            <a class="group relative w-max" href="{{url_for('transfer')}}"
+              ><span>🤲 Transferir dinero 🤝</span
+              ><span
+                class="absolute -bottom-1 left-0 w-0 transition-all h-0.5 bg-white group-hover:w-full"
+              ></span>
+            </a>
+          </li>
+          <li>
+            <a
+              class="group relative w-max"
+              href="{{url_for('generate_statement')}}"
+              ><span>📃👛 Generar estado de cuenta</span
+              ><span
+                class="absolute -bottom-1 left-0 w-0 transition-all h-0.5 bg-white group-hover:w-full"
+              ></span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <p class="px-4 py-2 bg-emerald-600 w-5/6 md:w-5/12 rounded-lg">{{get_flashed_messages()}}</p>
+    </div>
   </body>
 </html>
